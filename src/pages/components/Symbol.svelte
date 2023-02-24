@@ -1,5 +1,5 @@
 <script>
-	export let height = "1em"
+	export let height = "10em"
 	export let float = "none"
 	export let color = "#f8f8f2"
 </script>

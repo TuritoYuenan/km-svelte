@@ -1,6 +1,4 @@
 :root {
-	background: url(/src/assets/sample.jpg) fixed center no-repeat;
-	background-size: cover;
 	/* Zeno Rocha's Dracula Color Palette */
 	--dcl-bg: #282a36; --dcl-cl: #44475a;	--dcl-fg: #f8f8f2;
 	--dcl-cm: #6272a4; --dcl-cy: #8be9fd;	--dcl-gr: #50fa7b;
@@ -10,16 +8,16 @@
 
 body {
 	margin: 0;
-	background: #282A36A0;
+	background: var(--dcl-bg);
 	color: var(--dcl-fg);
 	font: normal x-large system-ui, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, ul, ol {margin: .1rem 0}
-a {color: inherit; text-decoration: none}
+a {color: var(--dcl-cm); text-decoration: none}
 
-header, nav {font-variant: small-caps;}
-main {margin: auto; padding: 1rem; width: 960px;}
+header {font-variant: small-caps;}
+main {margin: auto; padding: 1rem; width: 960px; min-height: 500px;}
 
 ::selection {background: var(--dcl-pr)}
-@media screen and (max-width: 960px) {main {width: 100%}}
+@media screen and (max-width: 1000px) {main {width: auto}}
