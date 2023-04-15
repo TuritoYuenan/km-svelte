@@ -2,6 +2,8 @@
 	import Footer from "./components/Footer.svelte";
     import Icons from "./components/Icons.svelte";
 	import Symbol from "./components/Symbol.svelte";
+	
+	import bannerImage from "../assets/banner.jpg";
 </script>
 
 <main>
@@ -30,7 +32,7 @@
 
 	nav a {
 		padding: .5em;
-		background: var(--dcl-cl);
+		background: var(--canva1);
 		color: inherit;
 		border-radius: 1em;
 		text-align: center;

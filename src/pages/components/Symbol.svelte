@@ -1,7 +1,7 @@
 <script>
 	export let height = "10em"
 	export let float = "none"
-	export let color = "#f8f8f2"
+	export let color = "#e9abb1"
 </script>
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 80"

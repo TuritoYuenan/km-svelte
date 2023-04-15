@@ -1,23 +1,55 @@
 :root {
 	/* Zeno Rocha's Dracula Color Palette */
-	--dcl-bg: #282a36; --dcl-cl: #44475a;	--dcl-fg: #f8f8f2;
-	--dcl-cm: #6272a4; --dcl-cy: #8be9fd;	--dcl-gr: #50fa7b;
-	--dcl-or: #ffb86c; --dcl-pk: #ff79c6;	--dcl-pr: #bd93f9;
+	--dcl-bg: #282a36; --dcl-cl: #44475a; --dcl-fg: #f8f8f2;
+	--dcl-cm: #6272a4; --dcl-cy: #8be9fd; --dcl-gr: #50fa7b;
+	--dcl-or: #ffb86c; --dcl-pk: #ff79c6; --dcl-pr: #bd93f9;
 	--dcl-rd: #ff5555; --dcl-yl: #f1fa8c;
+
+	/* Canva Pink Sky Color Palette */
+	--canva0: #1a364e; --canva1: #162a40;	--canva2: #a35c6e;
+	--canva3: #cb808b;	--canva4: #e9abb1;
 }
+
+/* BUILDING BLOCKS */
 
 body {
 	margin: 0;
-	background: var(--dcl-bg);
-	color: var(--dcl-fg);
+	background: var(--canva0);
+	color: var(--canva4);
 	font: normal x-large system-ui, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, ul, ol {margin: .1rem 0}
-a {color: var(--dcl-cm); text-decoration: none}
+header {
+	font-variant: small-caps;
+}
 
-header {font-variant: small-caps;}
-main {margin: auto; padding: 1rem; width: 960px; min-height: 500px;}
+main {
+	margin: auto;
+	padding: 1rem;
+	width: 960px;
+	min-height: 500px;
+}
 
-::selection {background: var(--dcl-pr)}
-@media screen and (max-width: 1000px) {main {width: auto}}
+/* TEXT */
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+	margin: .5em 0;
+}
+
+a {
+	color: var(--canva3);
+	text-decoration: none
+}
+
+::selection, blockquote {
+	background: var(--canva4);
+	color: var(--canva0);
+}
+
+/* RESPONSIVE-NESS */
+
+@media screen and (max-width: 1000px) {
+	main {
+		width: auto
+	}
+}

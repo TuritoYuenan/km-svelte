@@ -4,20 +4,20 @@
 </script>
 
 <svelte:head>
-	<title>KM Worldbuilding: {title}</title>
+	<title>Knabino Magia: {title}</title>
 </svelte:head>
 
 <footer>
-	<h2><a href="/">Knabino Magia Worldbuilding Database</a></h2>
+	<h3><a href="/">Knabino Magia Worldbuilding Database</a></h3>
 	<p>
 		&COPY; {time.getFullYear()}
-		<a href="https://turitoyuenan.github.io/">Turito Yuenan</a>
-		(<a href="mailto:turitoyuenan@proton.me">turitoyuenan@proton.me</a>).
-		<a href="https://draculatheme.com">Dracula Theme</a> by Zeno Rocha
+		<a href="https://turitoyuenan.github.io/">Turito Yuenan</a>.
+		Canva Pink Sky Palette
+		<!-- <a href="https://draculatheme.com">Dracula Theme</a> by Zeno Rocha -->
 	</p>
 </footer>
 
 <style>
 	footer {font-size: medium;}
-	h2 a {color: inherit;}
+	h3 a {color: inherit;}
 </style>

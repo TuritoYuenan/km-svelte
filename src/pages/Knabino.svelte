@@ -9,7 +9,7 @@
 <main>
 	<Icons icon='magi' float='right'/>
 	<Header {topic} />
-	<section>
+	<section style="height: 50em;">
 
 	</section>
 	<Footer title={topic} />
