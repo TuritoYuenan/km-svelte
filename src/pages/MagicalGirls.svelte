@@ -1,7 +1,7 @@
-<script>
-	import Header from "./components/Header.svelte";
-	import Footer from "./components/Footer.svelte";
-    import Icons from "./components/Icons.svelte";
+<script lang="ts">
+	import Header from "../components/Header.svelte";
+	import Footer from "../components/Footer.svelte";
+    import Icons from "../components/Icons.svelte";
 
 	const topic = "Magical Girls";
 </script>

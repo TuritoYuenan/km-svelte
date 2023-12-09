@@ -1,8 +1,5 @@
-<script>
-    import Knabino from "../Knabino.svelte";
-
-
-	export let topic = '';
+<script lang="ts">
+    export let topic: string;
 </script>
 
 <header>

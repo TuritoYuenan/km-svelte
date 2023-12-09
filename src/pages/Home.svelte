@@ -1,9 +1,7 @@
-<script>
-	import Footer from "./components/Footer.svelte";
-    import Icons from "./components/Icons.svelte";
-	import Symbol from "./components/Symbol.svelte";
-	
-	import bannerImage from "../assets/banner.jpg";
+<script lang="ts">
+	import Footer from "../components/Footer.svelte";
+    import Icons from "../components/Icons.svelte";
+	import Symbol from "../components/Symbol.svelte";
 </script>
 
 <main>
