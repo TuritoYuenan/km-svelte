@@ -1,8 +1,10 @@
-<script>
-	export let height = '10em'
-	export let color = '#e9abb1'
-	export let float = 'none'
-	export let icon = 'flag'
+<script lang='ts'>
+	type Icons = 'flag' | 'magi';
+
+	export let icon: Icons = 'flag';
+	export let height: string = '10em';
+	export let color: string = '#e9abb1';
+	export let float: 'none' | 'left' | 'right' = 'none';
 </script>
 
 <svg version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' height={height} style='float: {float};'>

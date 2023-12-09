@@ -1,3 +1,5 @@
-# Knabino Magia
+# Knabino Magia Database
 
-Knabino Magia (Esperanto for 'magical girl') is a fictional work that circulates around the stories of magical girls from different nations, on an alternative version of planet Earth, nicknamed 'Magitero' (Esperanto for "magical earth")
+Knabino Magia (Esperanto for 'magical girl') is a fiction by Turito Yuenan about the lives and adventures of magical girls around the world.
+
+This website serves as a place to search through the fiction's contents.

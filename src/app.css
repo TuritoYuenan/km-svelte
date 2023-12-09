@@ -1,39 +1,40 @@
 :root {
-	/* Zeno Rocha's Dracula Color Palette */
-	--dcl-bg: #282a36; --dcl-cl: #44475a; --dcl-fg: #f8f8f2;
-	--dcl-cm: #6272a4; --dcl-cy: #8be9fd; --dcl-gr: #50fa7b;
-	--dcl-or: #ffb86c; --dcl-pk: #ff79c6; --dcl-pr: #bd93f9;
-	--dcl-rd: #ff5555; --dcl-yl: #f1fa8c;
-
 	/* Canva Pink Sky Color Palette */
 	--canva0: #1a364e; --canva1: #162a40;	--canva2: #a35c6e;
 	--canva3: #cb808b;	--canva4: #e9abb1;
 }
 
-/* BUILDING BLOCKS */
-
 body {
 	margin: 0;
 	background: var(--canva0);
 	color: var(--canva4);
-	font: normal x-large system-ui, sans-serif;
+	font-family: system-ui, sans-serif;
+	font-size: 16px;
 }
 
 header {
 	font-variant: small-caps;
 }
 
-main {
+header, main, footer {
+	width: 110ch;
 	margin: auto;
 	padding: 1rem;
-	width: 960px;
-	min-height: 500px;
 }
 
-/* TEXT */
+h1, h2, h3, h4, h5, h6 {
+	margin-inline: 0;
+	margin-block: 1rem 0.5rem;
+}
 
-h1, h2, h3, h4, h5, h6, p, ul, ol {
-	margin: .5em 0;
+p, ul, ol {
+	margin-inline: 0;
+	margin-block: 0 1rem;
+}
+
+p, li {
+	min-width: 45ch;
+	max-width: 75ch;
 }
 
 a {
@@ -44,12 +45,4 @@ a {
 ::selection, blockquote {
 	background: var(--canva4);
 	color: var(--canva0);
-}
-
-/* RESPONSIVE-NESS */
-
-@media screen and (max-width: 1000px) {
-	main {
-		width: auto
-	}
 }
