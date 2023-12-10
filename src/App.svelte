@@ -1,8 +1,8 @@
-<script lang='ts'>
-	import Symbol from './components/Symbol.svelte';
-	import Footer from './components/Footer.svelte';
+<script lang="ts">
+	import Symbol from "./components/Symbol.svelte";
+	import Footer from "./components/Footer.svelte";
 
-	import strings from './data/strings';
+	import strings from "./data/strings";
 </script>
 
 <header>
@@ -13,13 +13,13 @@
 <main>
 	<h2>{strings.headings[0]}</h2>
 	<ul>
-		{#each strings.description as text} <li>{text}</li> {/each}
+		{#each strings.description as text}
+			<li>{text}</li>
+		{/each}
 	</ul>
 
 	<h2>{strings.headings[1]}</h2>
-	<div class='ch'>
-
-	</div>
+	<section></section>
 
 	<h2>{strings.headings[2]}</h2>
 	<div class='ch'>
