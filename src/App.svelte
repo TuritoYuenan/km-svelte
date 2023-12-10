@@ -1,6 +1,8 @@
 <script lang="ts">
 	import Symbol from "./components/Symbol.svelte";
 	import Footer from "./components/Footer.svelte";
+	import CountryView from "./components/CountryView.svelte";
+	import CountryMap from "./components/CountryMap.svelte";
 
 	import strings from "./data/strings";
 </script>
@@ -22,9 +24,8 @@
 	<section></section>
 
 	<h2>{strings.headings[2]}</h2>
-	<div class='ch'>
-
-	</div>
+	<CountryView />
+	<CountryMap />
 </main>
 
 <Footer />
@@ -39,11 +40,5 @@
 			margin-top: 0;
 			font-size: 4em;
 		}
-	}
-
-	.ch {
-		height: 200px;
-		margin-top: 1rem;
-		background-color: var(--canva1);
 	}
 </style>
