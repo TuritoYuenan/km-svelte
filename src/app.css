@@ -2,14 +2,15 @@
 	/* Canva Pink Sky Color Palette */
 	--canva0: #1a364e; --canva1: #162a40;	--canva2: #a35c6e;
 	--canva3: #cb808b;	--canva4: #e9abb1;
+
+	background: var(--canva0);
+	color: var(--canva4);
+	font-size: 16px;
+	font-family: system-ui, sans-serif;
 }
 
 body {
 	margin: 0;
-	background: var(--canva0);
-	color: var(--canva4);
-	font-family: system-ui, sans-serif;
-	font-size: 16px;
 }
 
 header {

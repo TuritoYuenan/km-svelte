@@ -1,43 +1,39 @@
 <script lang='ts'>
 	import Symbol from './components/Symbol.svelte';
+	import Footer from './components/Footer.svelte';
+
+	import strings from './data/strings';
 </script>
 
 <header>
 	<Symbol />
-	<h1>Knabino Magia<br/>Database</h1>
+	<h1>{strings.title}</h1>
 </header>
 
 <main>
-	<h2>Description</h2>
+	<h2>{strings.headings[0]}</h2>
 	<ul>
-		<li>
-			Knabino Magia (Esperanto for 'magical girl') is a fiction by Turito Yuenan
-			about the lives and adventures of magical girls around the world.
-		</li>
-		<li>
-			This website serves as a place to search through the fiction's contents.
-		</li>
+		{#each strings.description as text} <li>{text}</li> {/each}
 	</ul>
 
-	<h2>Magical Girls</h2>
-	<div class='ch'></div>
+	<h2>{strings.headings[1]}</h2>
+	<div class='ch'>
 
-	<h2>Countries</h2>
-	<div class='ch'></div>
+	</div>
+
+	<h2>{strings.headings[2]}</h2>
+	<div class='ch'>
+
+	</div>
 </main>
 
-<footer>
-	<p>
-		&COPY; 2023 <a href='https://turitoyuenan.github.io/'>Turito Yuenan</a> |
-		using Canva Pink Sky color palette.
-	</p>
-</footer>
+<Footer />
 
 <style>
 	header {
 		display: flex;
+		flex-direction: row;
 		align-items: center;
-		justify-content: center;
 
 		& h1 {
 			margin-top: 0;
