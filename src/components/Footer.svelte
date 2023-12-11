@@ -5,7 +5,7 @@
 
 <footer>
 	<p>
-		&COPY; 2023 <a href={author.website}>{author.name}</a> |
+		&COPY; 2023 <a href={author.website} target="_blank">{author.name}</a> |
 		using Canva Pink Sky color palette.
 	</p>
 </footer>

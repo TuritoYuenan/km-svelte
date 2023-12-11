@@ -6,8 +6,8 @@ export default {
 	},
 	headings: [
 		'Introduction',
-		'Magical girls',
-		'Countries',
+		'Magical Girls',
+		'Fictional Countries',
 	],
 	description: [
 		`Knabino Magia (Esperanto for "magical girl") is a fantasy fiction

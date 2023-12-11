@@ -10,6 +10,7 @@
 <header>
 	<Symbol />
 	<h1>{strings.title}</h1>
+	<p>by Turito Yuenan</p>
 </header>
 
 <main>
@@ -33,12 +34,24 @@
 <style>
 	header {
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		align-items: center;
+
+		text-align: center;
+		font-size: 1.5em;
 
 		& h1 {
 			margin-top: 0;
-			font-size: 4em;
+			font-size: 2em;
+			font-variant: small-caps;
 		}
+	}
+
+	header p:last-of-type {
+		margin-block-end: 0;
+	}
+
+	main h2:first-of-type {
+		margin-block-start: 0;
 	}
 </style>
