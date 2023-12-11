@@ -5,6 +5,11 @@ interface Country {
 	capital: string;
 	languages: string[];
 	description: string;
+	/**
+	 * The country's HTML coordinate.
+	 * Assuming a 2000 x 857 pixels map
+	 */
+	location: [number, number];
 }
 
 const countries: Country[] = [
@@ -15,6 +20,7 @@ const countries: Country[] = [
 		capital: "Shingal",
 		languages: ["Kurdish"],
 		description: "New homeland of Kurds, post-2014",
+		location: [500, 85]
 	},
 	{
 		id: "jp",
@@ -23,6 +29,7 @@ const countries: Country[] = [
 		capital: "Kyoto",
 		languages: ["Japanese"],
 		description: "Drastic version of Japan, with magic",
+		location: [780, 90]
 	},
 	{
 		id: "vn",
@@ -31,6 +38,7 @@ const countries: Country[] = [
 		capital: "Kinh Dương",
 		languages: ["Vietnamese"],
 		description: "Vietnam with magical characteristics",
+		location: [720, 150]
 	},
 	{
 		id: "il",
@@ -39,6 +47,7 @@ const countries: Country[] = [
 		capital: "Birosalem",
 		languages: ["Hebrew", "Yiddish", "Russian"],
 		description: "Russia gave the Jews some lands",
+		location: [710, 30]
 	},
 	{
 		id: "mq",
@@ -47,6 +56,7 @@ const countries: Country[] = [
 		capital: "Amman",
 		languages: ["Arabic"],
 		description: "A union of the Levant Arabic states",
+		location: [440, 115]
 	},
 	{
 		id: "nz",
@@ -55,6 +65,7 @@ const countries: Country[] = [
 		capital: "Wellington",
 		languages: ["Māori"],
 		description: "New Zealand with Maori domination",
+		location: [820, 300]
 	},
 	{
 		id: "yu",
@@ -63,6 +74,7 @@ const countries: Country[] = [
 		capital: "Zrakoplov",
 		languages: [""],
 		description: "Flying country, Yugoslavia successor",
+		location: [420, 70]
 	},
 	{
 		id: "hm",
@@ -71,6 +83,7 @@ const countries: Country[] = [
 		capital: "Central Inn",
 		languages: ["Japanese"],
 		description: "The Inn from Homura Tamura",
+		location: [0, 0]
 	},
 	{
 		id: "le",
@@ -79,6 +92,7 @@ const countries: Country[] = [
 		capital: "Riga",
 		languages: ["Latvian", "Lithuanian", "Estonian"],
 		description: "Union of 3 Baltic states",
+		location: [460, 10]
 	},
 ]
 

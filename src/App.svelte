@@ -25,8 +25,8 @@
 	<section></section>
 
 	<h2>{strings.headings[2]}</h2>
-	<CountryView />
 	<CountryMap />
+	<CountryView />
 </main>
 
 <Footer />
