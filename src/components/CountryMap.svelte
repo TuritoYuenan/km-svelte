@@ -2,31 +2,29 @@
 	import countries from "../data/countries";
 	import worldMap from "../assets/worldmap.svg";
 	import { countryIndex } from "../data/stores";
+	import Container from "../components/Container.svelte";
 
 	function setCountry(index: number) {
 		return () => ($countryIndex = index);
 	}
 </script>
 
-<section>
-	<div class="labels">
-		{#each countries as { name, location }, i}
+<Container>
+	<div class="view" style:background="url({worldMap})" style:background-size="cover">
+		{#each countries as { name, position }, i}
 			<button
-				style:left={location[0] + "px"}
-				style:top={location[1] + "px"}
+				style:left={position[0] + "px"}
+				style:top={position[1] + "px"}
 				on:click={setCountry(i)}>{name}</button
 			>
 		{/each}
 	</div>
-	<img src={worldMap} alt="World Map" />
-</section>
+</Container>
 
 <style>
-	section {
+	div.view {
 		margin-top: 1rem;
-		padding: 1rem;
-		background: var(--canva1);
-		border-radius: 2rem;
+		position: relative;
 		aspect-ratio: 2000 / 857;
 
 		& img {
@@ -35,16 +33,12 @@
 		}
 	}
 
-	.labels {
+	button {
+		padding: 0.2rem;
 		position: absolute;
-		z-index: 1;
-
-		& button {
-			padding: 0.2rem;
-			position: absolute;
-			background: var(--canva0);
-			color: inherit;
-			border-radius: 0.5rem;
-		}
+		background: var(--canva0);
+		color: inherit;
+		border-radius: 0.5rem;
+		cursor: pointer;
 	}
 </style>

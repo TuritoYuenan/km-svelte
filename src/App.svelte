@@ -26,6 +26,7 @@
 
 	<h2>{strings.headings[2]}</h2>
 	<CountryMap />
+	<br/>
 	<CountryView />
 </main>
 

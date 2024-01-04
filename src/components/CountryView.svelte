@@ -2,31 +2,36 @@
 	import countries from "../data/countries";
 	import { countryIndex } from "../data/stores";
 	import flag from "../assets/blank_flag.svg";
+	import Container from "./Container.svelte";
 
 	$: country = countries[$countryIndex];
 </script>
 
-<section class="view">
-	<h3 style:grid-area="c_name">{country.name}</h3>
-	<p style:grid-area="c_title"><b>Official Name</b> <br/> {country.fullName}</p>
-	<p style:grid-area="c_code"><b>Country Code</b> <br/> {country.id}</p>
-	<p style:grid-area="c_capital"><b>Capital</b> <br/> {country.capital}</p>
-	<p style:grid-area="c_lang"><b>Languages</b> <br/> {country.languages}</p>
-	<p style:grid-area="c_desc"><b>Description</b> <br/> {country.description}</p>
-	<img style:grid-area="image" src={flag} alt="Flag">
-</section>
+<Container>
+	<div class="map">
+		<h3 style:grid-area="name">{country.name}</h3>
+		<p style:grid-area="title"><b>Official Name</b> <br/> {country.fullName}</p>
+		<p style:grid-area="code"><b>Country Code</b> <br/> {country.id}</p>
+		<p style:grid-area="capital"><b>Capital</b> <br/> {country.capital}</p>
+		<p style:grid-area="lang"><b>Languages</b> <br/> {country.languages}</p>
+		<p style:grid-area="desc"><b>Description</b> <br/> {country.description}</p>
+		<img style:grid-area="image" src={flag} alt="Flag">
+	</div>
+</Container>
 
 <style>
-	section {
-		margin-top: 1rem;
-		padding: 0.1rem 1.5rem;
-
-		background: var(--canva1);
-		border-radius: 2rem;
+	div.map {
+		display: grid;
+		grid-template-areas:
+			'name name image'
+			'title code image'
+			'capital lang image'
+			'desc desc image';
 	}
 
 	h3 {
 		font-size: 2em;
+		margin-block-start: 0;
 	}
 
 	p {
@@ -39,12 +44,4 @@
 		margin: auto;
 	}
 
-	.view {
-		display: grid;
-		grid-template-areas:
-			'c_name c_name image'
-			'c_title c_code image'
-			'c_capital c_lang image'
-			'c_desc c_desc image';
-	}
 </style>
