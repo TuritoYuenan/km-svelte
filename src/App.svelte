@@ -1,8 +1,9 @@
 <script lang="ts">
 	import Symbol from "./components/Symbol.svelte";
 	import Footer from "./components/Footer.svelte";
-	import CountryView from "./components/CountryView.svelte";
+	import Container from "./components/Container.svelte";
 	import CountryMap from "./components/CountryMap.svelte";
+	import CountryView from "./components/CountryView.svelte";
 
 	import strings from "./data/strings";
 </script>
@@ -10,21 +11,28 @@
 <header>
 	<Symbol />
 	<h1>{strings.title}</h1>
-	<p>by Turito Yuenan</p>
+	<p>{strings.subtitle}</p>
 </header>
 
 <main>
 	<h2>{strings.headings[0]}</h2>
 	<ul>
-		{#each strings.description as text}
-			<li>{text}</li>
+		{#each strings.description as paragraph}
+			<li>{paragraph}</li>
 		{/each}
 	</ul>
 
 	<h2>{strings.headings[1]}</h2>
-	<section></section>
+	<ul>
+		{#each strings.disclaimer as paragraph}
+			<li>{paragraph}</li>
+		{/each}
+	</ul>
 
 	<h2>{strings.headings[2]}</h2>
+	<Container></Container>
+
+	<h2>{strings.headings[3]}</h2>
 	<CountryMap />
 	<br/>
 	<CountryView />

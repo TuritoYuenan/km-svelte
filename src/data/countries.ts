@@ -4,7 +4,7 @@ interface Country {
 	fullName: string;
 	capital: string;
 	languages: string[];
-	description: string;
+	description: string[];
 	/**
 	 * The country's HTML coordinate.
 	 * Assuming a 2000 x 857 pixels map
@@ -19,7 +19,10 @@ const countries: Country[] = [
 		fullName: "Republic of Kurdistan",
 		capital: "Shingal",
 		languages: ["Kurdish"],
-		description: "New homeland of Kurds, post-2014",
+		description: [
+			"In this fictional universe, the Kurdish people have actually gained independence in early 2014, following an uprising against Turkish and Mashraqi powers.",
+			"The uprising - with involvement of famous magical girl Layla - led to establishing a unified Kurdish country, which later got recognised in Q3 of 2014.",
+		],
 		position: [510, 85]
 	},
 	{
@@ -28,7 +31,9 @@ const countries: Country[] = [
 		fullName: "Magical State of Japan",
 		capital: "Kyoto",
 		languages: ["Japanese"],
-		description: "Drastic version of Japan, with magic",
+		description: [
+			"Japan with magical characteristics"
+		],
 		position: [780, 100]
 	},
 	{
@@ -37,7 +42,9 @@ const countries: Country[] = [
 		fullName: "Magical State of Vietnam",
 		capital: "Kinh Dương",
 		languages: ["Vietnamese"],
-		description: "Vietnam with magical characteristics",
+		description: [
+			"Vietnam with magical characteristics"
+		],
 		position: [710, 160]
 	},
 	{
@@ -46,7 +53,11 @@ const countries: Country[] = [
 		fullName: "State of New Israel",
 		capital: "Birosalem",
 		languages: ["Hebrew", "Yiddish", "Russian"],
-		description: "Russia gave the Jews some lands",
+		description: [
+			"In this fictional universe, the Soviet idea of Jewish Autonomous Oblast (JAO) had instead succeeded in fostering a proper Jewish home",
+			"The oblast then evolved past Soviet dependency, and in late 1991 when the union dissolved, cut away to form the state of New Israel",
+			"The existance of a new, more peaceful homeland attracted Jewish people to migrate in, leaving the old location to Palestine, nowadays a part of Mashriq Arabia",
+		],
 		position: [695, 55]
 	},
 	{
@@ -55,7 +66,7 @@ const countries: Country[] = [
 		fullName: "Mashriq Arab Union",
 		capital: "Amman",
 		languages: ["Arabic"],
-		description: "A union of the Levant Arabic states",
+		description: ["A union of the Levant Arabic states"],
 		position: [440, 130]
 	},
 	{
@@ -63,8 +74,8 @@ const countries: Country[] = [
 		name: "Awtera",
 		fullName: "Republic of Awtera",
 		capital: "Wellington",
-		languages: ["Māori"],
-		description: "New Zealand with Maori domination",
+		languages: ["Māori", "English"],
+		description: ["New Zealand with Maori domination"],
 		position: [820, 300]
 	},
 	{
@@ -72,17 +83,22 @@ const countries: Country[] = [
 		name: "Nadoslavia",
 		fullName: "Aerial Nation of Nadoslavia",
 		capital: "Zrakoplov",
-		languages: [""],
-		description: "Flying country, Yugoslavia successor",
+		languages: ["Serbian", "Croatian", "Slovene"],
+		description: [
+			"In this fictional universe, the Yugoslav Wars came to an abrupt and tragic end in 1997 when a terrorist group "
+		],
 		position: [400, 85]
 	},
 	{
-		id: "hm",
+		id: "--",
 		name: "Homura village",
 		fullName: "Village of the Homuras",
 		capital: "Central Inn",
 		languages: ["Japanese"],
-		description: "The Inn from Homura Tamura",
+		description: [
+			"This is a small community consisting of multiverse versions of Homura (magical girl from Madoka Magica)",
+			"The village is located in the interdimensional location between timelines (as inherited from the Homura Tamura spinoff)",
+		],
 		position: [0, 0]
 	},
 	{
@@ -91,7 +107,9 @@ const countries: Country[] = [
 		fullName: "Union of the Baltics",
 		capital: "Riga",
 		languages: ["Latvian", "Lithuanian", "Estonian"],
-		description: "Union of 3 Baltic states",
+		description: [
+			"This is the union of the 3 Baltic states Latvia, Lithuania, and Estonia established after the dissolve of the Soviet Union"
+		],
 		position: [450, 25]
 	},
 ]

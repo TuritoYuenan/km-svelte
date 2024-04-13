@@ -10,7 +10,7 @@
 </script>
 
 <Container>
-	<div class="view" style:background="url({worldMap})" style:background-size="cover">
+	<div class="map" style:background="url({worldMap})" style:background-size="cover">
 		{#each countries as { name, position }, i}
 			<button
 				style:left={position[0] + "px"}
@@ -22,7 +22,7 @@
 </Container>
 
 <style>
-	div.view {
+	div.map {
 		margin-top: 1rem;
 		position: relative;
 		aspect-ratio: 2000 / 857;
@@ -34,11 +34,21 @@
 	}
 
 	button {
-		padding: 0.2rem;
+		padding: 0.3rem;
 		position: absolute;
-		background: var(--canva0);
-		color: inherit;
+		background: var(--canva4);
+		color: var(--canva1);
+		border: none;
 		border-radius: 0.5rem;
+		transition: var(--default-transition);
 		cursor: pointer;
+
+		&:hover {
+			scale: 1.1;
+		}
+
+		&:active {
+			scale: 1;
+		}
 	}
 </style>

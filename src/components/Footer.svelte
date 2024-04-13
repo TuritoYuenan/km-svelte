@@ -6,6 +6,6 @@
 <footer>
 	<p>
 		&COPY; 2023 <a href={author.website} target="_blank">{author.name}</a> |
-		using Canva Pink Sky color palette.
+		Using Canva's Pink Sky color palette by rahma amalia.
 	</p>
 </footer>

@@ -1,32 +1,60 @@
 <script lang="ts">
-	import countries from "../data/countries";
-	import { countryIndex } from "../data/stores";
 	import flag from "../assets/blank_flag.svg";
+	import { countryIndex } from "../data/stores";
+	import countries from "../data/countries";
 	import Container from "./Container.svelte";
 
 	$: country = countries[$countryIndex];
+
+	function displayLanguages(languages: string[]) {
+		let langString = languages[0];
+
+		for (let i = 1; i < languages.length; i++) {
+			langString += ", " + languages[i];
+		}
+
+		return langString;
+	}
 </script>
 
 <Container>
 	<div class="map">
 		<h3 style:grid-area="name">{country.name}</h3>
-		<p style:grid-area="title"><b>Official Name</b> <br/> {country.fullName}</p>
-		<p style:grid-area="code"><b>Country Code</b> <br/> {country.id}</p>
-		<p style:grid-area="capital"><b>Capital</b> <br/> {country.capital}</p>
-		<p style:grid-area="lang"><b>Languages</b> <br/> {country.languages}</p>
-		<p style:grid-area="desc"><b>Description</b> <br/> {country.description}</p>
-		<img style:grid-area="image" src={flag} alt="Flag">
+		<div style:grid-area="full">
+			<h4>Official Name</h4>
+			<p>{country.fullName}</p>
+		</div>
+		<div style:grid-area="code">
+			<h4>Country Code</h4>
+			<p>{country.id}</p>
+		</div>
+		<div style:grid-area="city">
+			<h4>Capital</h4>
+			<p>{country.capital}</p>
+		</div>
+		<div style:grid-area="lang">
+			<h4>Languages</h4>
+			<p>{displayLanguages(country.languages)}</p>
+		</div>
+		<div style:grid-area="desc">
+			<h4>Description</h4>
+			{#each country.description as paragraph}
+				<p>{paragraph}</p>
+			{/each}
+		</div>
+		<img style:grid-area="image" src={flag} alt="Flag" />
 	</div>
 </Container>
 
 <style>
 	div.map {
 		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 		grid-template-areas:
-			'name name image'
-			'title code image'
-			'capital lang image'
-			'desc desc image';
+			"name name image"
+			"full code image"
+			"city lang image"
+			"desc desc desc";
 	}
 
 	h3 {
@@ -34,14 +62,10 @@
 		margin-block-start: 0;
 	}
 
-	p {
-		min-width: 30ch;
-	}
-
 	img {
-		width: 15em;
+		width: 100%;
 		height: auto;
 		margin: auto;
+		border-radius: 0.5rem;
 	}
-
 </style>

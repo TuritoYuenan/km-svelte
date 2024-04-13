@@ -6,6 +6,9 @@
 	--canva3: #cb808c;
 	--canva4: #e9aab1;
 
+	/* Default Transition */
+	--default-transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
 	background: var(--canva0);
 	color: var(--canva4);
 	font-size: 16px;
@@ -37,7 +40,6 @@ p, ul, ol {
 }
 
 p, li {
-	min-width: 45ch;
 	max-width: 75ch;
 }
 
